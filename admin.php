@@ -74,14 +74,7 @@ $products = $pdo->query("
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <!-- Метатеги и стили -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+<?php require_once './components/head.php' ?>
 
 <body>
     <?php require_once './components/header.php' ?>
