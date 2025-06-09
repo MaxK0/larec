@@ -238,6 +238,9 @@ header {
     font-size: 2rem;
     color: var(--primary-color);
 }
+.category-title {
+    margin-top: 10px;
+}
 .category-icon .img-fluid {
     aspect-ratio: 4/3;
     object-fit: contain;
