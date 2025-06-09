@@ -8,7 +8,7 @@ class SiteController extends Controller
 {
     public function home()
     {
-        $categories = Category::take(6)->get();
+        $categories = Category::take(8)->get();
 
         return view('home', compact('categories'));
     }
