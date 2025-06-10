@@ -57,10 +57,6 @@ class OrderResource extends Resource
                     ->searchable()
                     ->required(),
 
-                TextInput::make('address')
-                    ->label('Адрес доставки')
-                    ->required(),
-
                 DateTimePicker::make('date_order')
                     ->label('Дата получения заказа'),
 
@@ -91,9 +87,6 @@ class OrderResource extends Resource
                     ->label('Пользователь')
                     ->searchable()
                     ->sortable(),
-
-                TextColumn::make('address')
-                    ->label('Адрес доставки'),
 
                 TextColumn::make('date_order')
                     ->label('Дата получения заказа')

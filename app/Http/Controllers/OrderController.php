@@ -12,10 +12,6 @@ class OrderController extends Controller
 {
     public function checkout(Request $request)
     {
-        $request->validate([
-            'address' => 'required|string|max:255',
-        ]);
-
         $cart = session()->get('cart', []);
         if (empty($cart)) {
             return redirect()->back()->with('error', 'Корзина пуста');
@@ -28,7 +24,6 @@ class OrderController extends Controller
 
         $order = Order::create([
             'user_id' => Auth::id(),
-            'address' => $request->address,
             'status' => StatusEnum::New->value,
             'total' => $total,
         ]);

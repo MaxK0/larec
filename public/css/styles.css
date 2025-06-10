@@ -154,6 +154,9 @@ header {
 }
 
 .carousel-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: var(--border-radius);
     padding: 20px;
@@ -162,6 +165,9 @@ header {
     transform: translateX(-50%);
     width: 80%;
     max-width: 600px;
+}
+.carousel-caption .input_button {
+    width: fit-content;
 }
 
 .carousel-caption h5 {
@@ -184,6 +190,19 @@ header {
 /* Категории товаров */
 .categories {
     padding: 60px 0;
+}
+
+.categories .text-center,
+.popular-products .text-center {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.categories .input_button,
+.popular-products .input_button {
+    align-self: center;
+    width: fit-content;
 }
 
 .section-title {
@@ -617,6 +636,7 @@ h4 {
 
 .product-card {
     width: 24%;
+    height: auto;
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -643,10 +663,11 @@ h4 {
     justify-content: space-between;
     align-items: center;
     gap: 5px;
-    margin-top: 40px;
+    margin-top: auto;
 }
 .product-desc {
-    margin: 5px;
+    align-self: flex-start;
+    margin-bottom: 10px;
 }
 .product-card .price {
     font-size: 1.1em;
@@ -958,18 +979,21 @@ h4 {
 
 .input_button {
     display: block;
+    margin: 10px 0;
     background-color: #28a745;
+    padding: 10px;
     color: #fff;
-    font-weight: bold;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
 .input_button:hover {
     background-color: #218838;
+    color: #fff;
 }
 
 .add-product-form button {
@@ -1198,9 +1222,17 @@ main.container {
         width: 95%;
     }
 
-    .carousel-item img {
-        height: auto;
+    .carousel-caption {
+        padding: 10px 5px;
     }
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        margin-bottom: 10px;
+    }
+
+
 
     .table td, .table th {
         padding: 0.75rem;
@@ -1223,6 +1255,12 @@ main.container {
 
     .product-card {
         width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .search-box {
+        width: 55%;
     }
 }
 

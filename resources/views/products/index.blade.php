@@ -19,10 +19,7 @@
                                  class="product-img">
 
                             <h3 class="product-name">{{ $product->name }}</h3>
-                            <details>
-                                <summary class="product-summary">Подробнее</summary>
-                                <p class="product-desc">{!! nl2br(e($product->description)) !!}</p>
-                            </details>
+                            <p class="product-desc">{!! nl2br(e($product->description)) !!}</p>
                             <div class="product-card-btn">
                                 <p class="price">{{ number_format($product->price, 0) }} руб</p>
                                 <form action="{{ route('cart.add', $product->id) }}" method="POST">

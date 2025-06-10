@@ -15,34 +15,34 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="{{ asset('img/slider1.jpg') }}" class="d-block w-100" alt="Акции">
-                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Сезонные скидки до 50%</h5>
                         <p>Только этой неделе на все фрукты и овощи</p>
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-lg">Посмотреть</a>
+                        <a href="{{ route('categories.index') }}" class="input_button">Посмотреть</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('img/slider2.jpg') }}" class="d-block w-100" alt="Новинки">
-                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Новые поступления</h5>
                         <p>Свежие продукты от местных фермеров</p>
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-lg">В каталог</a>
+                        <a href="{{ route('categories.index') }}" class="input_button">В каталог</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('img/slider3.jpg') }}" class="d-block w-100" alt="Доставка">
-                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Бесплатная доставка</h5>
                         <p>При заказе от 2000 рублей</p>
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-lg">Заказать</a>
+                        <a href="{{ route('categories.index') }}" class="input_button">Заказать</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('img/slider4.jpg') }}" class="d-block w-100" alt="Качество">
-                    <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Гарантия качества</h5>
                         <p>Только свежие и натуральные продукты</p>
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-lg">В каталог</a>
+                        <a href="{{ route('categories.index') }}" class="input_button">В каталог</a>
                     </div>
                 </div>
             </div>
@@ -55,17 +55,18 @@
         </div>
     </section>
 
-    <!-- Категории товаров -->
     <section class="categories py-5 bg-light">
         <div class="container">
             <h2 class="section-title text-center mb-5">Категории товаров</h2>
             <div class="row g-4">
                 @foreach($categories as $category)
                     <div class="col-6 col-md-3">
-                        <a href="{{ route('products.byCategory', $category->id) }}" class="category-card animate__animated animate__fadeInUp">
+                        <a href="{{ route('products.byCategory', $category->id) }}"
+                           class="category-card animate__animated animate__fadeInUp">
                             <div class="category-icon">
                                 @if($category->image)
-                                    <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" class="img-fluid">
+                                    <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}"
+                                         class="img-fluid">
                                 @else
                                     <i class="fas fa-box"></i>
                                 @endif
@@ -76,10 +77,41 @@
                 @endforeach
             </div>
             <div class="text-center mt-4">
-                <a href="{{ route('categories.index') }}" class="btn btn-primary">Все категории</a>
+                <a href="{{ route('categories.index') }}" class="input_button">Все категории</a>
             </div>
         </div>
     </section>
+
+    <section class="popular-products py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Товары недели</h2>
+            <div class="products">
+                @foreach($popularProducts as $product)
+                    <div class="product-card">
+                        <img src="{{ asset('storage/' . $product->image) }}"
+                             alt="{{ $product->name }}"
+                             class="product-img">
+
+                        <h3 class="product-name">{{ $product->name }}</h3>
+                        <p class="product-desc">{!! nl2br(e($product->description)) !!}</p>
+                        <div class="product-card-btn">
+                            <p class="price">{{ number_format($product->price, 0) }} руб</p>
+                            <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="input_button">
+                                    Добавить в корзину
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{ route('products.index') }}" class="input_button">Все товары</a>
+            </div>
+        </div>
+    </section>
+
     <div class="map-container">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d37430.81583846662!2d54.35025607314836!3d54.101651914380604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JfQvdCw0LzQtdC90LrQsCDQnNC40LvQuNGG0LXQudGB0LrQsNGPINGD0LvQuNGG0LAsIDHQkA!5e0!3m2!1sru!2sru!4v1740774060960!5m2!1sru!2sru"

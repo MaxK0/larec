@@ -43,10 +43,6 @@
                                 </tr>
                             @endif
                             <tr>
-                                <th>Адрес</th>
-                                <td>{{ $order->address }}</td>
-                            </tr>
-                            <tr>
                                 <th>Сумма</th>
                                 <td>{{ $order->total }} руб.</td>
                             </tr>

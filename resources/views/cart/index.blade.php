@@ -71,10 +71,6 @@
                 <div class="col-md-6 text-end">
                     <form action="{{ route('orders.checkout') }}" method="POST">
                         @csrf
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Адрес доставки:</label>
-                            <input type="text" name="address" id="address" class="input-main form-control" required>
-                        </div>
                         <button type="submit" class="btn btn-success btn-lg">
                             <i class="fas fa-check"></i> Оформить заказ
                         </button>
