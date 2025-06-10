@@ -233,7 +233,6 @@ header {
 .category-card {
     background-color: white;
     border-radius: var(--border-radius);
-    padding: 20px;
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
@@ -253,7 +252,7 @@ header {
 .category-icon {
     width: 80px;
     height: 80px;
-    background-color: rgba(40, 167, 69, 0.1);
+    background-color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -268,6 +267,7 @@ header {
 .category-icon .img-fluid {
     aspect-ratio: 4/3;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 .category-card h3 {
@@ -700,15 +700,17 @@ h4 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.cart__btns .btn-confirm {
-    background-color: #28a745;
-    border: none;
-    transition: all ease-in-out .3s;
+.cart__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.cart__btns .btn-confirm:hover {
-    background-color: #218838;
+.cart__btns .btn {
+    width: fit-content;
 }
-
+.cart__btns form {
+    width: fit-content;
+}
 
 .cart h2 {
     margin-top: 0;
@@ -1069,6 +1071,10 @@ main.container {
     overflow-x: scroll;
 }
 
+tfoot {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .show__table {
     background-color: white;
     border-radius: 8px;
@@ -1307,6 +1313,15 @@ main.container {
     }
 
     .product-card {
+        width: 100%;
+    }
+
+    .cart__btns {
+        row-gap: 10px;
+        flex-wrap: wrap;
+    }
+    .cart__btns form,
+    .cart__btns .btn {
         width: 100%;
     }
 }

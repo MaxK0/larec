@@ -25,7 +25,8 @@
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <img src="{{ asset('storage/' . $item['image']) }}" alt="{{ $item['name'] }}" width="60" class="me-3">
+                                    <img src="{{ asset('storage/' . $item['image']) }}" alt="{{ $item['name'] }}"
+                                         width="60" class="me-3">
                                 </div>
                             </td>
                             <td>
@@ -36,7 +37,8 @@
                                 <form action="{{ route('cart.update', $id) }}" method="POST" class="d-flex">
                                     @csrf
                                     @method('PUT')
-                                    <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1" class="form-control me-2" style="width: 70px;">
+                                    <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1"
+                                           class="form-control me-2" style="width: 70px;">
                                     <button type="submit" class="btn btn-sm btn-outline-secondary">Обновить</button>
                                 </form>
                             </td>
@@ -63,20 +65,16 @@
                 </table>
             </div>
 
-            <div class="cart__btns row mt-4">
-                <div class="col-md-6">
-                    <a href="{{ route('categories.index') }}" class="btn btn-outline-primary">
-                        <i class="fas fa-arrow-left"></i> Продолжить покупки
-                    </a>
-                </div>
-                <div class="col-md-6 text-end">
-                    <form action="{{ route('orders.checkout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn-confirm btn btn-success btn-lg">
-                            <i class="fas fa-check"></i> Оформить заказ
-                        </button>
-                    </form>
-                </div>
+            <div class="cart__btns mt-4">
+                <a href="{{ route('categories.index') }}" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Продолжить покупки
+                </a>
+                <form action="{{ route('orders.checkout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn-confirm btn btn-success btn-lg">
+                        <i class="fas fa-check"></i> Оформить заказ
+                    </button>
+                </form>
             </div>
         @else
             <div class="alert alert-info">
