@@ -137,6 +137,11 @@ header {
     padding: 3px 6px;
 }
 
+.cart__desc {
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
 /* Главный слайдер */
 .main-slider {
     margin-top: 0;

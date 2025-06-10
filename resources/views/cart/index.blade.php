@@ -5,6 +5,7 @@
 @section('content')
     <div class="container py-5">
         <h1>Корзина покупок</h1>
+        <p class="cart__desc">Получение и оплата производятся в магазине</p>
 
         @if(count($cart) > 0)
             <div class="table-responsive">
