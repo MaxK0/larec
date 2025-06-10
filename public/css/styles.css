@@ -695,6 +695,16 @@ h4 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.cart__btns .btn-confirm {
+    background-color: #28a745;
+    border: none;
+    transition: all ease-in-out .3s;
+}
+.cart__btns .btn-confirm:hover {
+    background-color: #218838;
+}
+
+
 .cart h2 {
     margin-top: 0;
 }
@@ -1111,12 +1121,43 @@ main.container {
     margin: 0;
 }
 
+.select {
+    background-color: #28a745;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.select:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+.select option {
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+}
+.select option:hover {
+    background-color: #218838;
+}
+
+.profile__filter .btn {
+    background-color: #28a745;
+    border: none;
+    transition: all ease-in-out .3s;
+}
+.profile__filter .btn:hover {
+    background-color: #218838;
+}
 .profile__filter .input_button:active {
     padding: 12px 25px;
 }
-.profile__filter option {
-    font-weight: 400;
-}
+
 .orders {
     display: flex;
     flex-direction: column;

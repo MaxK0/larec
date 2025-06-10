@@ -10,7 +10,7 @@
 
             <div class="profile__filter">
                 <form method="GET" action="{{ route('orders.index') }}">
-                    <select name="status" class="btn btn-primary" onchange="this.form.submit()">
+                    <select name="status" class="select" onchange="this.form.submit()">
                         <option value="">Все статусы</option>
                         @foreach($statuses as $status)
                             <option value="{{ $status }}" {{ $selectedStatus == $status ? 'selected' : '' }}>

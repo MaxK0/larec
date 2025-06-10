@@ -62,7 +62,7 @@
                 </table>
             </div>
 
-            <div class="row mt-4">
+            <div class="cart__btns row mt-4">
                 <div class="col-md-6">
                     <a href="{{ route('categories.index') }}" class="btn btn-outline-primary">
                         <i class="fas fa-arrow-left"></i> Продолжить покупки
@@ -71,7 +71,7 @@
                 <div class="col-md-6 text-end">
                     <form action="{{ route('orders.checkout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-success btn-lg">
+                        <button type="submit" class="btn-confirm btn btn-success btn-lg">
                             <i class="fas fa-check"></i> Оформить заказ
                         </button>
                     </form>
@@ -81,7 +81,7 @@
             <div class="alert alert-info">
                 Ваша корзина пуста
             </div>
-            <a href="{{ route('categories.index') }}" class="btn btn-primary">
+            <a href="{{ route('categories.index') }}" class="input_button">
                 <i class="fas fa-arrow-left"></i> Перейти к покупкам
             </a>
         @endif
