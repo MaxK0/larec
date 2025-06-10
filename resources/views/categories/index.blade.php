@@ -13,7 +13,7 @@
             <div class="row g-4">
                 @foreach($categories as $category)
                     <div class="col-md-3 col-6">
-                        <div class="category-card">
+                        <div class="category-card p-2">
                             <a href="{{ route('products.byCategory', $category->id) }}">
                                 @if($category->image)
                                     <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}" class="category-image">
