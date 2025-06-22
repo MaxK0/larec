@@ -1287,11 +1287,19 @@ tfoot {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1150px) {
     .logo-text {
         display: none;
     }
+}
 
+@media (max-width: 1040px) {
+    .nav-link > .fas {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
     .footer-info {
         width: 100%;
     }
@@ -1315,8 +1323,6 @@ tfoot {
     .carousel-caption p {
         margin-bottom: 10px;
     }
-
-
 
     .table td, .table th {
         padding: 0.75rem;
@@ -1359,17 +1365,9 @@ tfoot {
     }
 }
 
-@media (max-width: 1200px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: none !important;
-    }
-    .navbar-expand-lg .navbar-toggler {
-        display: flex  !important;
-    }
-}
-
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
+
         max-width: fit-content;
     }
 }
