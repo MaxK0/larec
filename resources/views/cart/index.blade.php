@@ -80,7 +80,7 @@
             <div class="alert alert-info">
                 Ваша корзина пуста
             </div>
-            <a href="{{ route('categories.index') }}" class="input_button">
+            <a href="{{ route('categories.index') }}" class="input_button cart__btn">
                 <i class="fas fa-arrow-left"></i> Перейти к покупкам
             </a>
         @endif

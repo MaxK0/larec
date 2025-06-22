@@ -9,20 +9,10 @@
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('img/slider1.jpg') }}" class="d-block w-100" alt="Акции">
-                    <div class="carousel-caption animate__animated animate__fadeIn">
-                        <h5>Сезонные скидки до 50%</h5>
-                        <p>Только этой неделе на все фрукты и овощи</p>
-                        <a href="{{ route('categories.index') }}" class="input_button">Посмотреть</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('img/slider2.jpg') }}" class="d-block w-100" alt="Новинки">
+                    <img src="{{ asset('img/products_2.jpg') }}" class="d-block w-100" alt="Новинки">
                     <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Новые поступления</h5>
                         <p>Свежие продукты от местных фермеров</p>
@@ -30,15 +20,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/slider3.jpg') }}" class="d-block w-100" alt="Доставка">
-                    <div class="carousel-caption animate__animated animate__fadeIn">
-                        <h5>Бесплатная доставка</h5>
-                        <p>При заказе от 2000 рублей</p>
-                        <a href="{{ route('categories.index') }}" class="input_button">Заказать</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('img/slider4.jpg') }}" class="d-block w-100" alt="Качество">
+                    <img src="{{ asset('img/products.jpg') }}" class="d-block w-100" alt="Качество">
                     <div class="carousel-caption animate__animated animate__fadeIn">
                         <h5>Гарантия качества</h5>
                         <p>Только свежие и натуральные продукты</p>

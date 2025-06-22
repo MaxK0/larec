@@ -49,6 +49,7 @@ img {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 }
 
 #app {
@@ -93,6 +94,11 @@ header {
 
 .search-box {
     position: relative;
+    width: 50%;
+}
+
+.navbar-nav {
+    gap: 10px;
 }
 
 .search-input {
@@ -154,7 +160,7 @@ header {
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 700px;
     object-fit: cover;
 }
 
@@ -692,6 +698,11 @@ h4 {
     text-decoration: line-through;
 }
 
+.add-to-cart {
+    width: fit-content;
+    text-wrap: wrap;
+}
+
 .cart {
     margin-top: 40px;
     padding: 20px;
@@ -711,7 +722,9 @@ h4 {
 .cart__btns form {
     width: fit-content;
 }
-
+.cart__btn {
+    align-self: flex-start;
+}
 .cart h2 {
     margin-top: 0;
 }
@@ -757,7 +770,7 @@ h4 {
 .product-card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px 10px;
     margin: 10px 0;
     text-align: center;
     transition: transform 0.2s;
@@ -1035,6 +1048,11 @@ h4 {
     margin-top: 20px;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-brand img {
     border-radius: 50%;
 }
@@ -1234,6 +1252,19 @@ tfoot {
     .container {
         width: 85%;
     }
+    .carousel-item img {
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1450px) {
+    .search-box {
+        width: 45%;
+    }
+    .navbar-nav {
+        gap: 0;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -1245,6 +1276,10 @@ tfoot {
 @media (max-width: 1240px) {
     .container {
         width: 90%;
+    }
+
+    .search-box {
+        width: 36%;
     }
 
     .footer-container {
@@ -1307,14 +1342,18 @@ tfoot {
     }
 }
 
+@media (max-width: 630px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
 @media (max-width: 470px) {
     .search-box {
         max-width: 60%;
     }
 
-    .product-card {
-        width: 100%;
-    }
+
 
     .cart__btns {
         row-gap: 10px;

@@ -41,7 +41,17 @@ class CartController extends Controller
 
         session()->put('cart', $cart);
 
-        return redirect()->back()->with('success', 'Товар добавлен в корзину');
+        // Подсчет общего количества товаров в корзине
+        $cartCount = 0;
+        foreach ($cart as $item) {
+            $cartCount += $item['quantity'];
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Товар добавлен в корзину',
+            'cart_count' => $cartCount
+        ]);
     }
 
     public function remove($productId)

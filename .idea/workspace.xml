@@ -169,6 +169,19 @@
       <path value="$PROJECT_DIR$/vendor/league/csv" />
       <path value="$PROJECT_DIR$/vendor/symfony/html-sanitizer" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/support" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/contracts" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/pretty-array" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/archtechx/enums" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-locale-names" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/publisher" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/locale-list" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/locales" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-country-names" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-currency-names" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/config" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/lang" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -239,7 +252,8 @@
       <workItem from="1747089783757" duration="6597000" />
       <workItem from="1747621485305" duration="1831000" />
       <workItem from="1748923516194" duration="3244000" />
-      <workItem from="1749379881113" duration="21445000" />
+      <workItem from="1749379881113" duration="38215000" />
+      <workItem from="1750595272651" duration="3918000" />
     </task>
     <servers />
   </component>
