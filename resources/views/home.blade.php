@@ -92,10 +92,7 @@
     </section>
 
     <div class="map-container">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d37430.81583846662!2d54.35025607314836!3d54.101651914380604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JfQvdCw0LzQtdC90LrQsCDQnNC40LvQuNGG0LXQudGB0LrQsNGPINGD0LvQuNGG0LAsIDHQkA!5e0!3m2!1sru!2sru!4v1740774060960!5m2!1sru!2sru"
-            height="300" style="border:0;" allowfullscreen="" loading="lazy" class="map"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2339.6572485133993!2d54.39216707713407!3d54.09755211825155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTTCsDA1JzUxLjIiTiA1NMKwMjMnNDEuMSJF!5e0!3m2!1sru!2sru!4v1750607895363!5m2!1sru!2sru&hl=ru" class="map" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 @endsection
 
